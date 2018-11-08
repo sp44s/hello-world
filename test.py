@@ -1,4 +1,6 @@
-
+''' this program opens a email log file , read each line which starts with "X-DSPAM-Confidence"
+    pick the confidence level and finds the average and prints the result
+'''
 
 filename = input("Enter File Name:- ")
 filepath = "E:\\Philip\\source\\" + filename
@@ -7,7 +9,6 @@ count = 0
 total = 0
 with open(filepath) as q:
     for line in q:
-        #print(line)
         if( line.startswith("X-DSPAM-Confidence:") == False):
             continue
         words = line.split()
